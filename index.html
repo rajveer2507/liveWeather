@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live Weather App - Get real-time weather information for any city">
+    <title>Live Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Live Weather App</h1>
+            <p class="description">Get real-time weather information for any city around the world</p>
+        </header>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name..." 
+                autocomplete="off"
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            <p></p>
+        </div>
+
+        <div class="weather-card" id="weatherCard">
+            <div class="weather-icon">
+                <img id="weatherIcon" src="" alt="Weather icon">
+            </div>
+            <div class="weather-info">
+                <h2 class="city-name" id="cityName"></h2>
+                <div class="temperature" id="temperature"></div>
+                <div class="weather-description" id="weatherDescription"></div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <span class="label">Humidity</span>
+                        <span class="value" id="humidity"></span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Feels Like</span>
+                        <span class="value" id="feelsLike"></span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Wind Speed</span>
+                        <span class="value" id="windSpeed"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
